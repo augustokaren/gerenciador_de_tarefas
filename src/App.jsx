@@ -44,10 +44,21 @@ function App() {
   const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    fetch("/suggestions.json")
-      .then((res) => res.json())
+    // Usar import.meta.env.BASE_URL para garantir que o caminho esteja
+    // correto tanto em dev quanto em deploy (caso o app esteja em um
+    // subpath). Também verificamos `res.ok` e logamos erros para facilitar
+    // o diagnóstico quando o arquivo não for encontrado ou houver erro.
+    const suggestionsUrl = `${import.meta.env.BASE_URL}suggestions.json`;
+    fetch(suggestionsUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
       .then((data) => setSuggestions(data))
-      .catch(() => setSuggestions([]));
+      .catch((err) => {
+        console.error("Erro ao carregar sugestões:", err, suggestionsUrl);
+        setSuggestions([]);
+      });
   }, []); // carrega apenas uma vez quando o componente monta
 
   function onTaskClick(taskId) {
