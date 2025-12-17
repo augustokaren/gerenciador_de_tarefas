@@ -172,7 +172,7 @@ function App() {
       <div className="w-[500px] space-y-4 ">
         {/* Title component: kept as a small wrapper around an <h1> */}
         <Title>Gerenciador de Tarefas</Title>
-        <AddTask onAddTaskSubmit={onAddTaskSubmit} />
+        <AddTask onAddTaskSubmit={onAddTaskSubmit} notify={showNotification} />
         {/* Suggestions card: changed to white/translucent for contrast over
             the orange/yellow gradient and to match other cards. */}
         <div className="p-4 bg-white bg-opacity-90 rounded">
