@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Organizar o quarto",
+    "description": "Arrumar a cama, guardar roupas e limpar a mesa."
+  },
+  {
+    "title": "Planejar refeições",
+    "description": "Criar um cardápio semanal e fazer lista de compras."
+  },
+  {
+    "title": "Estudar português",
+    "description": "Ler um texto e anotar vocabulário novo por 30 minutos."
+  },
+  {
+    "title": "Exercício rápido",
+    "description": "Fazer 20 minutos de alongamento ou caminhada."
+  },
+  {
+    "title": "Ler um capítulo",
+    "description": "Ler um capítulo do livro atual antes de dormir."
+  },
+  {
+    "title": "Revisar tarefas da semana",
+    "description": "Verificar tarefas concluídas e planejar prioridades para a próxima semana."
+  },
+  {
+    "title": "Limpar e-mail",
+    "description": "Arquivar mensagens antigas e responder mensagens importantes por 15 minutos."
+  }
+]
